@@ -14,7 +14,7 @@ Ansible is a powerful open-source automation tool used for configuration managem
 
 ---
 
-![Ansible Workflow](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC_7nwfJczCgZcIM4WJW9eol0kSpDOY6mFSk_u3YUnF2bBaWQC3GcIsPFp4yrHZZHqCiQ&usqp=CAU)
+![Ansible Workflow](https://www.tutorialspoint.com/ansible/images/ansible_works.jpg)
 
 ---
 
