@@ -1,0 +1,18 @@
+---
+- name: 📦 Install Package via Runtime Variable
+  hosts: all
+  become: true
+  gather_facts: false
+
+  # 🔧 Run this playbook using:
+  # ansible-playbook 5_use_runtime_variables.yml --extra-vars "package_name=git"
+
+  tasks:
+    - name: ✅ Install package defined at runtime
+      yum:
+        name: "{{ package_name }}"
+        state: present
+      tags:
+        - install
+        - runtime
+...

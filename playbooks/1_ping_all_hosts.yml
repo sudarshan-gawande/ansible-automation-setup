@@ -1,0 +1,10 @@
+---
+- name: 🛠️ Ping All Hosts
+  hosts: all
+  gather_facts: true
+  tasks:
+    - name: ✅ Ping managed hosts
+      ping:
+      tags:
+        - ping
+...

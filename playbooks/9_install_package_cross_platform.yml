@@ -1,0 +1,31 @@
+---
+- name: 🧩 Install Packages Based on OS Family
+  hosts: all
+  become: true
+  gather_facts: true
+
+  # 🧾 This playbook installs:
+  # - git on RedHat-based systems
+  # - maven on Debian/Ubuntu systems
+  # Uses ansible_os_family fact to determine OS
+
+  tasks:
+    - name: ✅ Install git on RedHat systems
+      yum:
+        name: git
+        state: present
+      when: ansible_os_family == 'RedHat'
+      tags:
+        - install
+        - redhat
+
+    - name: ✅ Install maven on Debian/Ubuntu systems
+      apt:
+        name: maven
+        state: present
+        update_cache: yes
+      when: ansible_os_family == 'Debian'
+      tags:
+        - install
+        - debian
+...

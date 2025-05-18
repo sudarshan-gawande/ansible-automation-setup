@@ -1,0 +1,20 @@
+---
+- name: 📦 Install Package Using Playbook-Level Variables
+  hosts: all
+  become: true
+  gather_facts: false
+
+  # 🧾 This playbook uses a variable defined in the 'vars' section below
+
+  vars:
+    package_name: git
+
+  tasks:
+    - name: ✅ Install "{{ package_name }}" package
+      yum:
+        name: "{{ package_name }}"
+        state: present
+      tags:
+        - install
+         - playbook-vars
+...

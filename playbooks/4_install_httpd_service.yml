@@ -1,0 +1,35 @@
+---
+- name: 🌐 Install and Configure Apache HTTPD on All Hosts
+  hosts: all
+  become: true
+  gather_facts: true
+
+  tasks:
+    - name: ✅ Install httpd package
+      yum:
+        name: httpd
+        state: latest
+      tags:
+        - install
+        - httpd
+
+    - name: 📄 Copy index.html to Apache web root
+      copy:
+        src: index.html
+        dest: /var/www/html/index.html
+        owner: root
+        group: root
+        mode: '0644'
+      tags:
+        - copy
+        - httpd
+
+    - name: 🚀 Ensure httpd service is running and enabled
+      service:
+        name: httpd
+        state: started
+        enabled: true
+      tags:
+        - start
+        - httpd
+...

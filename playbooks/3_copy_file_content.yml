@@ -1,0 +1,18 @@
+---
+- name: 📄 Copy Content to a File on Webservers
+  hosts: webservers
+  become: true
+  gather_facts: false
+
+  tasks:
+    - name: ✅ Copy message into /home/ansible/sudarshan.txt
+      copy:
+        content: "Welcome To Ansible"
+        dest: /home/ansible/sudarshan.txt
+        owner: ansible
+        group: ansible
+        mode: '0644'
+      tags:
+        - copy
+        - content
+...

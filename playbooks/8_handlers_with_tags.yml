@@ -1,0 +1,39 @@
+---
+- name: 🔁 Install HTTPD and Use Handlers with Tags
+  hosts: all
+  become: true
+  gather_facts: false
+
+  # 🧾 This playbook demonstrates tagging and handlers
+  # Run specific tasks using:
+  # ansible-playbook handlers_with_tags.yml --tags "httpd"
+  # ansible-playbook handlers_with_tags.yml --tags "copy"
+  # ansible-playbook handlers_with_tags.yml --skip-tags "copy"
+
+  tasks:
+    - name: ✅ Install httpd package
+      yum:
+        name: httpd
+        state: present
+      tags:
+        - httpd
+        - install
+
+    - name: 📄 Copy custom index.html to web root
+      copy:
+        src: index.html
+        dest: /var/www/html/index.html
+        owner: root
+        group: root
+        mode: '0644'
+      notify: start httpd
+      tags:
+        - copy
+        - web
+
+  handlers:
+    - name: start httpd
+      service:
+        name: httpd
+        state: started
+...
