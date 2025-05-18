@@ -3,42 +3,153 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to Sudarshan's Web</title>
+  <title>Sudarshan Gawande | Ansible Deployment</title>
   <style>
+    :root {
+      --blue: #38bdf8;
+      --bg: #0f172a;
+      --text: #f8fafc;
+      --text-sub: #cbd5e1;
+      --card: #1e293b;
+    }
+
     body {
-      background-color: #0f172a;
-      color: #f8fafc;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem 1rem;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       text-align: center;
-      padding: 5% 2%;
     }
 
     h1 {
-      font-size: 3rem;
+      color: var(--blue);
+      font-size: 2.5rem;
       margin-bottom: 0.5rem;
-      color: #38bdf8;
     }
 
-    p {
-      font-size: 1.2rem;
-      color: #cbd5e1;
+    .subtext {
+      color: var(--text-sub);
+      font-size: 1rem;
     }
 
     .badge {
-      margin-top: 20px;
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #1e293b;
+      background: var(--card);
       color: #94a3b8;
-      border-radius: 5px;
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 20px;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+
+    section {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    section h2 {
+      color: var(--blue);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: var(--text-sub);
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: var(--blue);
+      font-weight: bold;
+    }
+
+    .links {
+      margin-top: 1rem;
       font-size: 0.95rem;
-      letter-spacing: 0.5px;
+    }
+
+    .links a {
+      color: var(--blue);
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .tools {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .tool {
+      background: #0f172a;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid #334155;
+      font-size: 0.85rem;
+      color: var(--text);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .links a {
+        display: block;
+        margin: 6px 0;
+      }
     }
   </style>
 </head>
 <body>
+
   <h1>🚀 Welcome to Ansible Deployment</h1>
-  <p>This page was provisioned using Ansible by <strong>Sudarshan Gawande</strong>.</p>
+  <div class="subtext">This page was provisioned using Ansible by <strong>Sudarshan Gawande</strong>.</div>
   <div class="badge">DevOps Engineer | Automated with ❤️</div>
+
+  <section>
+    <h2>👨‍💻 About Me</h2>
+    <p>I'm <span class="highlight">Sudarshan Gawande</span>, a passionate DevOps & Java Engineer with experience in
+    <strong>CI/CD Pipelines</strong>, <strong>Kubernetes</strong>, <strong>Docker</strong>, <strong>Spring Boot</strong>,
+    <strong>Microservices</strong>, and Cloud Technologies.</p>
+    <p>I specialize in automating infrastructure and building scalable systems that empower fast and secure delivery.</p>
+    <div class="links">
+      📧 <a href="mailto:sudarshangawande98@gmail.com">Email</a> |
+      🌐 <a href="https://sudarshangawande.com" target="_blank">Portfolio</a> |
+      🐙 <a href="https://github.com/sudarshan-gawande" target="_blank">GitHub</a> |
+      💼 <a href="https://www.linkedin.com/in/sudarshan-gawande/" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>🧰 Tools & Technologies</h2>
+    <div class="tools">
+      <div class="tool">Ansible</div>
+      <div class="tool">AWS</div>
+      <div class="tool">Docker</div>
+      <div class="tool">Kubernetes</div>
+      <div class="tool">CI/CD</div>
+      <div class="tool">Jenkins</div>
+      <div class="tool">Git</div>
+      <div class="tool">Bitbucket</div>
+      <div class="tool">JIRA</div>
+      <div class="tool">SonarQube</div>
+      <div class="tool">JFrog Artifactory</div>
+      <div class="tool">JFrog Xray</div>
+      <div class="tool">Nexus</div>
+      <div class="tool">Spring Boot</div>
+      <div class="tool">Microservices</div>
+    </div>
+  </section>
+
 </body>
 </html>

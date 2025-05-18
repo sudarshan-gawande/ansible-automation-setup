@@ -94,6 +94,12 @@ ansible-playbook <yml-file-name> --ask-vault-pass
 ansible-vault decrypt <yml-file-name>
 ```
 
+# 🚀 Ansible Automation
+
+![Deployed using Ansible by Sudarshan Gawande](https://github.com/sudarshan-gawande/extra-images/blob/main/ansible-deployment.png)
+
+Ansible is a powerful open-source automation tool used for configuration management, application deployment, and task automation...
+
 ---
 
 ## 📄 License
